@@ -30,7 +30,30 @@
 
 ![VIEW_NAME ERD](./Logical-ERD.png)
 
+
+
 ----
+
+##Purchase Order Form
+
+>*About*
+
+### 0NF
+**PurchaseOrder** <span class = 'md'><b class = 'pk'>PurchaseOrder</b>, SupplierName, SupplierNumber, Address, City, Province, PostalCode, Phone, Date, <b class = 'rg'>ItemNumber, SupplierItemNumber, SupplierDescription, Quantity, Cost, Amount</b>, SubTotal, GST, Total</span>
+
+### 1NF
+**PurchaseOrder** <span class = 'md'><b class = 'pk'>PurchaseOrder</b>, SupplierName, SupplierNumber, Address, City, Province, PostalCode, Phone, Date, SubTotal, GST, Total</span>
+
+**PurchaseOrderItem** <span class = 'md'><b class = 'pk'><i class = 'fk'>PurchaseOrderNumber</i>, ItemNumber</b>, SupplierItemNumber, SupplierDescription, Quantity, Cost, Amount</span>
+
+### 2NF
+
+### 3NF
+**PurchaseOrder** <span class = 'md'><b class = 'pk'>PurchaseOrder</b>, <i class = 'fk'>SupplierNumber</i>, Date, SubTotal, GST, Total</span>
+
+**Supplier** <span class = 'md'><b class = 'pk'>SupplierNumber</b>, SupplierName, Address, City, Province, PostalCode, Phone</span>
+
+**PurchaseOrderItem** <span class = 'md'><b class = 'pk'><i class = 'fk'>PurchaseOrderNumber</i>, ItemNumber</b>, SupplierItemNumber, SupplierDescription, Quantity, Cost, Amount</span>
 
 ## Legend
 
